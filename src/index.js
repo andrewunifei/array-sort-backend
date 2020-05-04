@@ -4,6 +4,10 @@ const app = express();
 
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    return res.send('backend funcionando...')
+})
+
 app.post('/', (req, res) => {
     const { array } = req.body;
 
@@ -12,4 +16,4 @@ app.post('/', (req, res) => {
     return res.send({sorted});
 })
 
-app.listen(3333); 
+app.listen(3333);
